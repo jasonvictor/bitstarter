@@ -6,7 +6,7 @@ app.use(express.logger());
 
 app.get('/', function(request, response) {
 
-  var strBuffer = fs.readFile('./index.html', 'utf-8');
+  var strBuffer = fs.readFile(path.join(process.cwd(), 'index.html'), 'utf-8');
 
   response.send(strBuffer);
 });
