@@ -6,7 +6,7 @@ app.use(express.logger());
 
 app.get('/', function(request, response) {
 
-  var buffer = new Buffer(fs.readFile('index.html'));
+  var buffer = fs.readFile('index.html');
   var strBuffer = buffer.toString("utf-8");
 
   response.send(strBuffer);
